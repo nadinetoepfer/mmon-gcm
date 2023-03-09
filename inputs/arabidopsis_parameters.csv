@@ -1,0 +1,20 @@
+,Value,Units,Source
+P_abs,0.9,Dimensionless,"Zhu, Long, and Ort (2010)"
+T_l,0.00017,m,Wuyts et al. (2010)
+A_l,1.0,m$^2$,Fixed
+V_gc_ind,4.75e-13,dm$^3$,Jezek and Blatt (2017)
+FqFm,0.9,Dimensionless,Lawson (2003)
+R_ch,0.06923076923076923,Dimensionless,"Fujiwara, Sanjaya, and Itoh (2019)"
+L_air,0.37,Dimensionless,Earles et al. (2018)
+L_epidermis,0.15,Dimensionless,Wuyts et al. (2010)
+Vac_frac,0.751,Dimensionless,Wang et al. (2017)
+T,296.15,K,Horrer et al. (2016)
+R,0.08205,dm$^3$$\cdot$atm$\cdot$K$^{-1}$$\cdot$mol$^{-1}$,Tiesinga et al. (2019)
+N_gcs,580000000.0,GCs$\cdot$m$^{-2}$,"Papanatsiou, Amtmann, and Blatt (2016)"
+n,2.5,atm,Wang et al. (2017)
+m,0.8,atm$\cdot$µm$^{-1}$,Wang et al. (2017)
+r,5e-14,dm$^3$ µm$^{-1}$,Wang et al. (2017)
+s,3e-13,dm$^3$,Wang et al. (2017)
+C_apo,0.023020072199999998,mol$\cdot$dm$^{-3}$,Wang et al. (2017)
+A_closed,1.6,µm,Horrer et al. (2016)
+A_open,2.75,µm,Horrer et al. (2016)

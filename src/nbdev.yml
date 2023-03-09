@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "mmon-gcm"
+  site-url: "https://noahsprent.github.io/mmon-gcm"
+  description: "Repo for MMON-gcm"
+  repo-branch: main
+  repo-url: "https://github.com/noahsprent/mmon-gcm"

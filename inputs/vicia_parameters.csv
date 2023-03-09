@@ -1,0 +1,11 @@
+,Value,Units,Source
+n,1.8,atm,Hills
+m,0.4,atm µm$^{-1}$,Hills
+r,1.8e-13,dm$^3$ µm$^{-1}$,Hills
+s,3.2e-12,dm$^3$,Hills
+C_apo,0.0231999822,mol dm$^{-3}$,Hills
+T,298.15,K,Arabidopsis.org
+R,0.08205,dm$^3$ atm K$^{-1}$ mol$^{-1}$,Wikipedia
+N_gcs,580000000.0,gcs m$^{-2}$,Papanatsiou
+A_closed,6.0,µm,Jezek and Blatt
+A_open,16.5,µm,Jezek and Blatt

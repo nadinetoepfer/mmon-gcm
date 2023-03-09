@@ -1,0 +1,26 @@
+project:
+  type: website
+  output-dir: _docs
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+website:
+  title: "MMON-GCM"
+  favicon: favicon.svg
+  twitter-card: true
+  open-graph: true
+  repo-actions: [issue]
+  image: logo.svg
+  page-navigation: true
+  navbar:
+    background: primary
+    search: true
+  sidebar:
+    style: floating
+    logo: logo.svg
+
+metadata-files: [nbdev.yml, sidebar.yml]

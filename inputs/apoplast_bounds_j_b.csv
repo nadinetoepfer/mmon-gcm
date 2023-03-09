@@ -1,0 +1,8 @@
+State,Closed,Closed,Open,Open
+Bound,Lower,Upper,Lower,Upper
+Metabolite,,,,
+K,0.05,114,0.05,24
+Cl,0.3,44,0.1,7
+NITRATE,0.1,0.2,1,0.2
+MAL,0.5,20,0.4,3.5
+SUCROSE,0.4,3,1,8

@@ -1,0 +1,5 @@
+website:
+  title: "MMON-GCM"
+  favicon: ../favicon.svg
+  navbar:
+    logo: ../logo.svg

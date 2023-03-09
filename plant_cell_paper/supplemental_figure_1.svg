@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="100%"
+   height="100%"
+   viewBox="0 0 2035 1527"
+   version="1.1"
+   xml:space="preserve"
+   style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;"
+   id="svg481"
+   sodipodi:docname="supplementary_1.svg"
+   inkscape:version="1.1.2 (1:1.1+202202050852+0a00cf5339)"
+   inkscape:export-filename="/home/nls119/google_drive/plant_cell/figures/supplementary_1.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs485">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    </defs><sodipodi:namedview
+   id="namedview483"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="0.46103471"
+   inkscape:cx="965.22017"
+   inkscape:cy="764.58452"
+   inkscape:window-width="900"
+   inkscape:window-height="1027"
+   inkscape:window-x="1004"
+   inkscape:window-y="12"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg481" />
+    <g
+   transform="matrix(0.76605419,0,0,0.83176268,-0.15128395,41.910115)"
+   id="g42">
+            <g
+   transform="matrix(1.47777,0,0,-1.43967,-986.263,1072.79)"
+   id="g6">
+                <path
+   d="m 1386,456.282 c 0,-40.095 -34.43,-72.646 -76.85,-72.646 h -153.68 c -42.42,0 -76.85,32.551 -76.85,72.646 v 203.071 c 0,40.095 34.43,72.647 76.85,72.647 h 153.68 c 42.42,0 76.85,-32.552 76.85,-72.647 z"
+   style="fill:#fafafa;stroke:#000000;stroke-width:3.22px"
+   id="path4" />
+            </g>
+            <g
+   transform="matrix(1.15402,0,0,-1.1304,-417.579,974.423)"
+   id="g10">
+                <path
+   d="m 1254.91,568.791 c 0,-44.025 -38.01,-79.768 -84.84,-79.768 H 1000.4 c -46.826,0 -84.84,35.743 -84.84,79.768 v 182.78 c 0,44.025 38.014,79.768 84.84,79.768 h 169.67 c 46.83,0 84.84,-35.743 84.84,-79.768 z"
+   style="fill:#c8e6c9;stroke:#000000;stroke-width:4.57px"
+   id="path8" />
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-251.846,-59.3679)"
+   id="g14">
+                <text
+   x="726.87598"
+   y="447.14801"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text12">Extracellular</text>
+            </g>
+            <g
+   transform="matrix(2.99457,0,0,-0.316663,-1210.25,370.65)"
+   id="g18">
+                <path
+   d="M 736.65,517.604 C 736.65,480.293 733.172,450 728.888,450 h -94.136 c -4.284,0 -7.762,30.293 -7.762,67.604 v 135.209 c 0,37.312 3.478,67.605 7.762,67.605 h 94.136 c 4.284,0 7.762,-30.293 7.762,-67.605 z"
+   style="fill:#bcaaa4;stroke:#000000;stroke-width:2.55px"
+   id="path16" />
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-68.3352,-508.144)"
+   id="g22">
+                <text
+   x="632.95203"
+   y="590.01202"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text20">Plastid</text>
+            </g>
+            <g
+   transform="matrix(2.99457,0,0,0.316663,-1210.25,117.095)"
+   id="g26">
+                <path
+   d="M 736.65,517.604 C 736.65,480.293 733.172,450 728.888,450 h -94.136 c -4.284,0 -7.762,30.293 -7.762,67.604 v 135.209 c 0,37.312 3.478,67.605 7.762,67.605 h 94.136 c 4.284,0 7.762,-30.293 7.762,-67.605 z"
+   style="fill:#a5d6a7;stroke:#000000;stroke-width:2.55px"
+   id="path24" />
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-67.3073,-393.087)"
+   id="g32">
+                <text
+   x="622.86298"
+   y="590.01202"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text30">V<tspan
+   x="645.09198 665.948"
+   y="590.01202 590.01202"
+   id="tspan28">ac</tspan>uole</text>
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-248.366,-430.922)"
+   id="g36">
+                <text
+   x="741.46899"
+   y="447.14801"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text34">Cytoplasm</text>
+            </g>
+            <g
+   transform="matrix(0,-0.379404,-0.673782,0,1467.75,622.995)"
+   id="g40">
+                <path
+   d="m 499.565,939.395 v 23.28 l -38.077,-23.28 38.077,-23.28 v 23.28 h 62.358 v -23.28 l 38.077,23.28 -38.077,23.28 v -23.28 z"
+   style="fill:#ffa726;stroke:#ffa726;stroke-width:9.74px"
+   id="path38" />
+            </g>
+        </g><g
+   transform="matrix(0.75722568,0,0,0.83176268,10.57528,122.72088)"
+   id="g82">
+            <g
+   transform="matrix(1.49499,0,0,1.46768,-1011.92,541.931)"
+   id="g46">
+                <path
+   d="m 1386,454.896 c 0,-39.33 -34.43,-71.26 -76.85,-71.26 h -153.68 c -42.42,0 -76.85,31.93 -76.85,71.26 V 660.74 c 0,39.329 34.43,71.26 76.85,71.26 h 153.68 c 42.42,0 76.85,-31.931 76.85,-71.26 z"
+   style="fill:#fafafa;stroke:#000000;stroke-width:3.19px"
+   id="path44" />
+            </g>
+            <g
+   transform="matrix(1.15402,0,0,1.12117,-422.015,669.221)"
+   id="g50">
+                <path
+   d="m 1254.91,568.521 c 0,-43.876 -38.01,-79.498 -84.84,-79.498 H 1000.4 c -46.826,0 -84.84,35.622 -84.84,79.498 v 183.32 c 0,43.876 38.014,79.498 84.84,79.498 h 169.67 c 46.83,0 84.84,-35.622 84.84,-79.498 z"
+   style="fill:#c8e6c9;stroke:#000000;stroke-width:4.61px"
+   id="path48" />
+            </g>
+            <g
+   transform="matrix(2.99457,0,0,0.316663,-1211.39,1219.5)"
+   id="g54">
+                <path
+   d="M 736.65,517.604 C 736.65,480.293 733.131,450 728.797,450 h -93.954 c -4.334,0 -7.853,30.293 -7.853,67.604 v 135.209 c 0,37.312 3.519,67.605 7.853,67.605 h 93.954 c 4.334,0 7.853,-30.293 7.853,-67.605 z"
+   style="fill:#bcaaa4;stroke:#000000;stroke-width:2.58px"
+   id="path52" />
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-68.5326,711.539)"
+   id="g58">
+                <text
+   x="632.95203"
+   y="590.01202"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text56">Plastid</text>
+            </g>
+            <g
+   transform="matrix(2.99457,0,0,0.316663,-1211.39,1325.95)"
+   id="g62">
+                <path
+   d="M 736.65,517.604 C 736.65,480.293 733.131,450 728.797,450 h -93.954 c -4.334,0 -7.853,30.293 -7.853,67.604 v 135.209 c 0,37.312 3.519,67.605 7.853,67.605 h 93.954 c 4.334,0 7.853,-30.293 7.853,-67.605 z"
+   style="fill:#a5d6a7;stroke:#000000;stroke-width:2.58px"
+   id="path60" />
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-68.1575,815.506)"
+   id="g68">
+                <text
+   x="622.86298"
+   y="590.01202"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text66">V<tspan
+   x="645.09198 665.948"
+   y="590.01202 590.01202"
+   id="tspan64">ac</tspan>uole</text>
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-249.501,772.785)"
+   id="g72">
+                <text
+   x="741.46899"
+   y="447.14801"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text70">Cytoplasm</text>
+            </g>
+            <g
+   transform="matrix(1.3054,0,0,1.20227,-251.846,641.456)"
+   id="g76">
+                <text
+   x="726.87598"
+   y="447.14801"
+   style="font-size:37.5px;font-family:ArialMT, Arial, sans-serif"
+   id="text74">Extracellular</text>
+            </g>
+            <g
+   transform="matrix(0,0.379404,-0.673782,0,1463.31,1012.87)"
+   id="g80">
+                <path
+   d="m 499.126,939.395 v 23.28 l -37.638,-23.28 37.638,-23.28 v 23.28 h 63.236 v -23.28 l 37.638,23.28 -37.638,23.28 v -23.28 z"
+   style="fill:#ffa726;stroke:#ffa726;stroke-width:9.82px"
+   id="path78" />
+            </g>
+        </g><g
+   transform="matrix(0.76605419,0,0,0.83176268,-370.44822,126.0543)"
+   id="g190">
+            
+            <g
+   id="g156">
+                <g
+   transform="matrix(0.703128,0,0,0.620551,1694.69,729.809)"
+   id="g150">
+                    <path
+   d="m 483.797,939.395 v 23.28 l -22.309,-23.28 22.309,-23.28 v 23.28 h 93.895 v -23.28 l 22.308,23.28 -22.308,23.28 v -23.28 z"
+   style="fill:#66bb6a;stroke:#66bb6a;stroke-width:7.9px"
+   id="path148" />
+                </g>
+                <g
+   transform="matrix(1.3054,0,0,1.20227,74.3634,7.46649)"
+   id="g154">
+                    <text
+   x="1577.0601"
+   y="1094.01"
+   style="font-size:32.917px;font-family:ArialMT, Arial, sans-serif"
+   id="text152">Exchange Reactions</text>
+                </g>
+            </g>
+            <g
+   id="g168">
+                <g
+   transform="matrix(0.703128,0,0,0.620551,1694.69,786.748)"
+   id="g160">
+                    <path
+   d="m 483.797,939.395 v 23.28 l -22.309,-23.28 22.309,-23.28 v 23.28 h 93.895 v -23.28 l 22.308,23.28 -22.308,23.28 v -23.28 z"
+   style="fill:#ffa726;stroke:#ffa726;stroke-width:7.9px"
+   id="path158" />
+                </g>
+                <g
+   transform="matrix(1.3054,0,0,1.20227,72.3387,64.406)"
+   id="g166">
+                    <text
+   x="1580.4399"
+   y="1094.01"
+   style="font-size:32.917px;font-family:ArialMT, Arial, sans-serif"
+   id="text164">T<tspan
+   x="1599.33 1610.29"
+   y="1094.01 1094.01"
+   id="tspan162">ra</tspan>nsport Reactions</text>
+                </g>
+            </g>
+            <g
+   id="g180">
+                <g
+   transform="matrix(0.703128,0,0,0.620551,1694.69,845.135)"
+   id="g172">
+                    <path
+   d="m 483.797,939.395 v 23.28 l -22.309,-23.28 22.309,-23.28 v 23.28 h 93.895 v -23.28 l 22.308,23.28 -22.308,23.28 v -23.28 z"
+   style="fill:#42a5f5;stroke:#42a5f5;stroke-width:7.9px"
+   id="path170" />
+                </g>
+                <g
+   transform="matrix(1.3054,0,0,1.20227,60.39,122.793)"
+   id="g178">
+                    <text
+   x="1589.59"
+   y="1094.01"
+   style="font-size:32.917px;font-family:ArialMT, Arial, sans-serif"
+   id="text176">T<tspan
+   x="1608.48 1619.4399"
+   y="1094.01 1094.01"
+   id="tspan174">ra</tspan>nsfer Reactions</text>
+                </g>
+            </g>
+            
+            <g
+   transform="matrix(1.6536592,0,0,1.1750098,-650.13144,31.962426)"
+   id="g188">
+                <rect
+   x="1603.0699"
+   y="1057.5699"
+   width="427.367"
+   height="161.23399"
+   style="fill:none;stroke:#000000;stroke-width:2.96px"
+   id="rect186" />
+            </g>
+        </g><g
+   transform="matrix(0.62831395,0.62831432,-0.36497376,0.36497403,805.02828,-276.92463)"
+   id="g202">
+            <path
+   d="m 461.488,939.395 h 124.989 v -23.28 l 13.523,23.28 -13.523,23.28 v -23.28 z"
+   style="fill:#66bb6a;stroke:#66bb6a;stroke-width:5.73px"
+   id="path200" />
+        </g><g
+   transform="matrix(0.53863213,0,0,0.51615078,201.97392,-58.393385)"
+   id="g206">
+            <path
+   d="m 483.797,939.395 v 23.28 l -22.309,-23.28 22.309,-23.28 v 23.28 h 93.895 v -23.28 l 22.308,23.28 -22.308,23.28 v -23.28 z"
+   style="fill:#66bb6a;stroke:#66bb6a;stroke-width:7.9px"
+   id="path204" />
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-102.67614,-1097.1494)"
+   id="g212">
+            <text
+   x="133.22"
+   y="1334.46"
+   style="font-size:54.167px;font-family:ArialMT, Arial, sans-serif"
+   id="text208">Mesophyll Cell</text>
+            <rect
+   x="133.22"
+   y="1340.2"
+   width="352.216"
+   height="3.967"
+   id="rect210" />
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-102.67614,-41.359801)"
+   id="g218">
+            <text
+   x="133.22"
+   y="1334.46"
+   style="font-size:54.167px;font-family:ArialMT, Arial, sans-serif"
+   id="text214">Guard Cell</text>
+            <rect
+   x="133.22"
+   y="1340.2"
+   width="258.905"
+   height="3.967"
+   id="rect216" />
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-45.840954,-956.07281)"
+   id="g224">
+            <text
+   x="76.463997"
+   y="1712.11"
+   style="font-size:54.167px;font-family:ArialMT, Arial, sans-serif"
+   id="text220">Apoplast</text>
+            <rect
+   x="76.463997"
+   y="1717.85"
+   width="210.795"
+   height="3.967"
+   id="rect222" />
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-773.43346,-605.01088)"
+   id="g238">
+            <text
+   x="1624.86"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text226">•</text>
+            <text
+   x="1645.8"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text228">Phloem Output (Objective)</text>
+            <rect
+   x="1645.8"
+   y="1025.03"
+   width="392.75699"
+   height="2.441"
+   id="rect230" />
+            <text
+   x="1624.86"
+   y="1060.08"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text232">• NADPHox_c/m/p</text>
+            <text
+   x="1624.86"
+   y="1098.67"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text236">• <tspan
+   x="1643.95 1663.71 1684.08"
+   y="1098.67 1098.67 1098.67"
+   id="tspan234">ATP</tspan>ase</text>
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-789.31591,21.803069)"
+   id="g246">
+            <text
+   x="1624.86"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text240">• NADPHox_c/m/p</text>
+            <text
+   x="1624.86"
+   y="1060.08"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text244">• <tspan
+   x="1643.95 1663.71 1684.08"
+   y="1060.08 1060.08 1060.08"
+   id="tspan242">ATP</tspan>ase</text>
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-1320.9488,-304.04832)"
+   id="g260">
+            <g
+   id="g258">
+                <text
+   x="1624.86"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text248">NEMs</text>
+                <text
+   x="1624.86"
+   y="1060.08"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text250">Cl</text>
+                <text
+   x="1656.34"
+   y="1048.98"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text252">-</text>
+                <text
+   x="1624.86"
+   y="1098.67"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text254">K</text>
+                <text
+   x="1647.1"
+   y="1087.5699"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text256">+</text>
+            </g>
+        </g><g
+   transform="matrix(0.81457401,0,0,1.0121693,145.70188,-1590.2533)"
+   id="g318">
+            <g
+   transform="matrix(1.51712,0,0,1.59445,421.992,820.525)"
+   id="g306">
+                <g
+   transform="matrix(0.809191,0,0,0.619633,-643.032,-36.5997)"
+   id="g282">
+                    <text
+   x="1624.86"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text262">• Ca</text>
+                    <text
+   x="1688.4"
+   y="1010.39"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text264">2+</text>
+                    <text
+   x="1624.86"
+   y="1060.08"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text266">• H</text>
+                    <text
+   x="1669.87"
+   y="1048.98"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text268">+</text>
+                    <text
+   x="1624.86"
+   y="1098.67"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text270">• H</text>
+                    <text
+   x="1669.87"
+   y="1109.77"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text272">2</text>
+                    <text
+   x="1680.67"
+   y="1098.67"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text274">O</text>
+                    <text
+   x="1624.86"
+   y="1137.26"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text276">•</text>
+                    <text
+   x="1645.8"
+   y="1137.26"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text278">Mg</text>
+                    <text
+   x="1692.1"
+   y="1126.16"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text280">2+</text>
+                </g>
+                <g
+   transform="matrix(0.809191,0,0,0.619633,103.307,-509.818)"
+   id="g304">
+                    <text
+   x="811.63"
+   y="1785.2"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text284">• NH</text>
+                    <text
+   x="880.70502"
+   y="1796.3"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text286">4</text>
+                    <text
+   x="891.513"
+   y="1774.1"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text288">+</text>
+                    <text
+   x="811.63"
+   y="1823.79"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text290">• NO</text>
+                    <text
+   x="882.56097"
+   y="1834.89"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text292">3</text>
+                    <text
+   x="893.36902"
+   y="1812.6899"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text294">-</text>
+                    <text
+   x="811.63"
+   y="1862.38"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text296">• Pi</text>
+                    <text
+   x="811.63"
+   y="1900.97"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text298">• SO</text>
+                    <text
+   x="880.72101"
+   y="1912.0699"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text300">4</text>
+                    <text
+   x="891.52899"
+   y="1889.87"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text302">2</text>
+                </g>
+            </g>
+            <g
+   transform="matrix(1.22764,0,0,0.987974,921.749,-208.943)"
+   id="g312">
+                <text
+   x="310.258"
+   y="1892.8101"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text308">Non-osmotic Exchange</text>
+                <text
+   x="342.728"
+   y="1930.3101"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text310">Metabolites (NEMs)</text>
+            </g>
+            <g
+   transform="matrix(1.08481,0,0,0.745635,-1532.45,417.779)"
+   id="g316">
+                <rect
+   x="2734.55"
+   y="1774.45"
+   width="245.70399"
+   height="231.32001"
+   style="fill:none;stroke:#000000;stroke-width:5.07px"
+   id="rect314" />
+            </g>
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-1330.5907,36.979227)"
+   id="g332">
+            <g
+   id="g330">
+                <text
+   x="1624.86"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text320">• O</text>
+                <text
+   x="1671.72"
+   y="1032.59"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text322">2</text>
+                <text
+   x="1624.86"
+   y="1060.08"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text324">• Photon</text>
+                <text
+   x="1624.86"
+   y="1098.67"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text326">• CO</text>
+                <text
+   x="1695.8"
+   y="1109.77"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text328">2</text>
+            </g>
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,-1325.3779,-626.86554)"
+   id="g346">
+            <g
+   id="g344">
+                <text
+   x="1624.86"
+   y="1021.49"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text334">• O</text>
+                <text
+   x="1671.72"
+   y="1032.59"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text336">2</text>
+                <text
+   x="1624.86"
+   y="1060.08"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text338">• Photon</text>
+                <text
+   x="1624.86"
+   y="1098.67"
+   style="font-size:33.333px;font-family:ArialMT, Arial, sans-serif"
+   id="text340">• CO</text>
+                <text
+   x="1695.8"
+   y="1109.77"
+   style="font-size:19.433px;font-family:ArialMT, Arial, sans-serif"
+   id="text342">2</text>
+            </g>
+        </g><g
+   transform="matrix(0.81457401,0,0,1.0121693,801.39595,-768.42973)"
+   id="g386">
+            <g
+   transform="matrix(0.956876,0,0,1.20503,-678.557,-351.684)"
+   id="g380">
+                <g
+   id="g374">
+                    <g
+   transform="matrix(1.28296,0,0,0.819877,-1364.54,-326.907)"
+   id="g360">
+                        <text
+   x="2021.51"
+   y="2246.6201"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text348">• K</text>
+                        <text
+   x="2075.46"
+   y="2232.74"
+   style="font-size:24.292px;font-family:ArialMT, Arial, sans-serif"
+   id="text350">+</text>
+                        <text
+   x="2021.51"
+   y="2293.8101"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text352">• Cl</text>
+                        <text
+   x="2087.02"
+   y="2279.9399"
+   style="font-size:24.292px;font-family:ArialMT, Arial, sans-serif"
+   id="text354">-</text>
+                        <text
+   x="2021.51"
+   y="2341.01"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text356">• Sucrose</text>
+                        <text
+   x="2021.51"
+   y="2388.2"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text358">• Fructose</text>
+                    </g>
+                    <g
+   transform="matrix(1.28296,0,0,0.819877,1507.56,1490.57)"
+   id="g372">
+                        <text
+   x="0"
+   y="29.846001"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text362">• Glucose</text>
+                        <text
+   x="0"
+   y="77.042999"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text364">• Malate</text>
+                        <text
+   x="151.22501"
+   y="63.167999"
+   style="font-size:24.292px;font-family:ArialMT, Arial, sans-serif"
+   id="text366">2-</text>
+                        <text
+   x="0"
+   y="124.239"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text368">• Citrate</text>
+                        <text
+   x="148.88499"
+   y="110.364"
+   style="font-size:24.292px;font-family:ArialMT, Arial, sans-serif"
+   id="text370">3-</text>
+                    </g>
+                </g>
+                <g
+   transform="matrix(1.28296,0,0,0.819877,44.2904,8.57731)"
+   id="g378">
+                    <rect
+   x="917.71997"
+   y="1797.12"
+   width="445.63"
+   height="199.856"
+   style="fill:none;stroke:#000000;stroke-width:4.17px"
+   id="rect376" />
+                </g>
+            </g>
+            <g
+   transform="matrix(1.22764,0,0,0.987974,100.776,-465.196)"
+   id="g384">
+                <text
+   x="341.55899"
+   y="1892.8101"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text382">Principal Osmolytes</text>
+            </g>
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,294.33091,-987.25179)"
+   id="g408">
+            <text
+   x="367.427"
+   y="1892.8101"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text404">Principal Osmolytes</text>
+            <text
+   x="367.427"
+   y="1940.01"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text406">NEMs</text>
+        </g><g
+   transform="matrix(1.0000023,0,0,0.99999514,294.33091,-1310.8944)"
+   id="g414">
+            <text
+   x="367.427"
+   y="1892.8101"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text410">Principal Osmolytes</text>
+            <text
+   x="367.427"
+   y="1940.01"
+   style="font-size:41.667px;font-family:ArialMT, Arial, sans-serif"
+   id="text412">NEMs</text>
+        </g><g
+   transform="matrix(0.70837091,-0.70837067,0.36497376,0.36497403,58.935538,1158.7362)"
+   id="g426">
+            <path
+   d="m 461.488,939.395 h 126.517 v -23.28 l 11.995,23.28 -11.995,23.28 v -23.28 z"
+   style="fill:#66bb6a;stroke:#66bb6a;stroke-width:5.23px"
+   id="path424" />
+        </g><g
+   transform="matrix(0.53863213,0,0,0.51615078,185.06593,603.71175)"
+   id="g430">
+            <path
+   d="m 483.797,939.395 v 23.28 l -22.309,-23.28 22.309,-23.28 v 23.28 h 93.895 v -23.28 l 22.308,23.28 -22.308,23.28 v -23.28 z"
+   style="fill:#66bb6a;stroke:#66bb6a;stroke-width:7.9px"
+   id="path428" />
+        </g><g
+   transform="matrix(0.76605419,0,0,0.83176268,-2.6331061,68.847158)"
+   id="g444">
+            <g
+   transform="matrix(1.27831,0,0,0.263253,-738.532,668.37)"
+   id="g434">
+                <rect
+   x="1078.62"
+   y="383.63599"
+   width="307.379"
+   height="348.36401"
+   style="fill:#fafafa;stroke:#000000;stroke-width:5.29px"
+   id="rect432" />
+            </g>
+            <g
+   transform="matrix(0,2.38219,-0.673782,0,1470.34,-637.067)"
+   id="g438">
+                <path
+   d="m 467.553,939.395 v 23.28 l -6.065,-23.28 6.065,-23.28 v 23.28 h 126.383 v -23.28 l 6.064,23.28 -6.064,23.28 v -23.28 z"
+   style="fill:#42a5f5;stroke:#42a5f5;stroke-width:2.88px"
+   id="path436" />
+            </g>
+            <g
+   transform="matrix(0,2.5598,-0.673782,0,1470.34,-342.231)"
+   id="g442">
+                <path
+   d="m 467.132,939.395 v 23.28 l -5.644,-23.28 5.644,-23.28 v 23.28 h 127.224 v -23.28 l 5.644,23.28 -5.644,23.28 v -23.28 z"
+   style="fill:#42a5f5;stroke:#42a5f5;stroke-width:2.69px"
+   id="path440" />
+            </g>
+        </g><g
+   transform="matrix(0.53863213,0,0,0.51615078,201.97392,262.04392)"
+   id="g448">
+            <path
+   d="m 483.797,939.395 v 23.28 l -22.309,-23.28 22.309,-23.28 v 23.28 h 93.895 v -23.28 l 22.308,23.28 -22.308,23.28 v -23.28 z"
+   style="fill:#66bb6a;stroke:#66bb6a;stroke-width:7.9px"
+   id="path446" />
+        </g>
+</svg>

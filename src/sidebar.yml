@@ -1,0 +1,37 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - section: Building model and defining parameters
+        contents:
+          - 1.0_generating_linkers.ipynb
+          - 1.1_buildingmodel.ipynb
+          - 1.2_defining_parameters.ipynb
+          - 1.3_atpase_constraint.ipynb
+          - 1.4_flutschconcentrations.ipynb
+          - 1.5_convert_horrer_starch_level.ipynb
+      - section: Solving and analysing specific scenarios for paper
+        contents:
+          - 2.1_solvingmodel.ipynb
+          - 2.2_analysingsolutions.ipynb
+          - 2.3_flux_map_values.ipynb
+      - section: Running constraints scan
+        contents:
+          - 3.1_generate_constraints_df.ipynb
+          - 3.2_run_constraint_scan.ipynb
+          - 3.3_analyse_constraint_scan.ipynb
+      - section: Running and analysing alternative flux modes
+        contents:
+          - 4.1_generate_alternative_flux_modes_matrix.ipynb
+          - 4.2_run_alternative_flux_modes.ipynb
+          - 4.3_analyse_alternative_flux_modes.ipynb
+      - prep_plant_cell.ipynb
+      - section: functions
+        contents:
+          - functions/alternativemodes.ipynb
+          - functions/analysing.ipynb
+          - functions/buildingediting.ipynb
+          - functions/constraintscan.ipynb
+          - functions/helper.ipynb
+          - functions/osmolyteconstraints.ipynb
+          - functions/solving.ipynb

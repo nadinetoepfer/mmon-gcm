@@ -1,0 +1,15 @@
+format: jb-book
+root: functions/index
+parts:
+- caption: Building and analysing the model
+  chapters:
+  - file: 01_buildingmodel
+  - file: 02.3_flutschconcentrations
+  - file: 02.1_parameters
+  - file: atpase_constraint
+- caption: Source for functions in library
+  chapters:
+  - file: functions/buildingediting
+  - file: functions/osmolyteconstraints
+  - file: functions/solving
+  - file: functions/supermodel

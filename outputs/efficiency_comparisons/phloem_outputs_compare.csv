@@ -1,0 +1,16 @@
+,,,blue,blue,blue,blue,white,white,white,white,nops,nops,nops,nops
+,,,unconstrained,unconstrained,constrained,constrained,unconstrained,unconstrained,constrained,constrained,unconstrained,unconstrained,constrained,constrained
+,,,wt,starchko,wt,starchko,wt,starchko,wt,starchko,wt,starchko,wt,starchko
+Light,ATPase,Starch,,,,,,,,,,,,
+blue,unconstrained,wt,100.0,100.0,100.0,100.0,95.546,95.546,95.546,95.547,95.565,95.565,95.566,95.566
+blue,unconstrained,starchko,100.0,100.0,100.0,100.0,95.546,95.546,95.546,95.547,95.565,95.565,95.566,95.566
+blue,constrained,wt,100.0,100.0,100.0,100.0,95.546,95.546,95.546,95.547,95.565,95.565,95.566,95.566
+blue,constrained,starchko,100.0,100.0,100.0,100.0,95.546,95.546,95.546,95.546,95.565,95.565,95.565,95.566
+white,unconstrained,wt,104.661,104.661,104.661,104.661,100.0,100.0,100.0,100.0,100.02,100.02,100.02,100.02
+white,unconstrained,starchko,104.661,104.661,104.661,104.661,100.0,100.0,100.0,100.0,100.02,100.02,100.02,100.02
+white,constrained,wt,104.661,104.661,104.661,104.661,100.0,100.0,100.0,100.0,100.02,100.02,100.02,100.02
+white,constrained,starchko,104.661,104.661,104.661,104.661,100.0,100.0,100.0,100.0,100.02,100.02,100.02,100.02
+nops,unconstrained,wt,104.64,104.64,104.64,104.641,99.98,99.98,99.98,99.98,100.0,100.0,100.0,100.0
+nops,unconstrained,starchko,104.64,104.64,104.64,104.641,99.98,99.98,99.98,99.98,100.0,100.0,100.0,100.0
+nops,constrained,wt,104.64,104.64,104.64,104.64,99.98,99.98,99.98,99.98,100.0,100.0,100.0,100.0
+nops,constrained,starchko,104.64,104.64,104.64,104.64,99.98,99.98,99.98,99.98,100.0,100.0,100.0,100.0
