@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>mmon-gcm - Alternative Flux Modes</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./4.2_run_alternative_flux_modes.html" rel="next">
+<link href="./3.3_analyse_constraint_scan.html" rel="prev">
+<link href="./favicon.svg" rel="icon" type="image/svg+xml">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="mmon-gcm - Alternative Flux Modes">
+<meta property="og:description" content="Looking for alternative solutions using the method for accounting for enzyme costs outlined in Cheung et al.&nbsp;(2015). From the methods section:">
+<meta property="og:site-name" content="mmon-gcm">
+<meta name="twitter:title" content="mmon-gcm - Alternative Flux Modes">
+<meta name="twitter:description" content="Looking for alternative solutions using the method for accounting for enzyme costs outlined in Cheung et al.&nbsp;(2015). From the methods section:">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">mmon-gcm</span>
+    </a>
+  </div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Alternative Flux Modes</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">MMON-GCM</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Building model and defining parameters</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1.0_generating_linkers.html" class="sidebar-item-text sidebar-link">Generating table for linkers/osmolytes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1.1_buildingmodel.html" class="sidebar-item-text sidebar-link">Building model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1.2_defining_parameters.html" class="sidebar-item-text sidebar-link">Finding parameters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1.3_atpase_constraint.html" class="sidebar-item-text sidebar-link">Is H+ATPase limiting?</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  1.4_flutschconcentrations.ipynb
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1.5_convert_horrer_starch_level.html" class="sidebar-item-text sidebar-link">Starch amount estimation</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Solving and analysing specific scenarios for paper</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2.1_solvingmodel.html" class="sidebar-item-text sidebar-link">Solving guard cell models for different parameters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2.2_analysingsolutions.html" class="sidebar-item-text sidebar-link">Analysing solutions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2.3_flux_map_values.html" class="sidebar-item-text sidebar-link">Calculating line widths for flux maps</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Running constraints scan</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3.1_generate_constraints_df.html" class="sidebar-item-text sidebar-link">Constraint scan</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3.2_run_constraint_scan.html" class="sidebar-item-text sidebar-link">Running Constraint Scan</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3.3_analyse_constraint_scan.html" class="sidebar-item-text sidebar-link">Analysing the results of the constraint scan</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Running and analysing alternative flux modes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4.1_generate_alternative_flux_modes_matrix.html" class="sidebar-item-text sidebar-link active">Alternative Flux Modes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4.2_run_alternative_flux_modes.html" class="sidebar-item-text sidebar-link">Run alternative flux modes simulations</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./4.3_analyse_alternative_flux_modes.html" class="sidebar-item-text sidebar-link">Analysing alternative flux modes</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  prep_plant_cell.ipynb
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">functions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/alternativemodes.html" class="sidebar-item-text sidebar-link">alternativemodes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/analysing.html" class="sidebar-item-text sidebar-link">Analysing</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/buildingediting.html" class="sidebar-item-text sidebar-link">buildingediting</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/constraintscan.html" class="sidebar-item-text sidebar-link">constraintscan</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/helper.html" class="sidebar-item-text sidebar-link">Helper functions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/osmolyteconstraints.html" class="sidebar-item-text sidebar-link">osmolyteconstraints</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./functions/solving.html" class="sidebar-item-text sidebar-link">solving</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#create-matrix-using-just-real-reactions" id="toc-create-matrix-using-just-real-reactions" class="nav-link active" data-scroll-target="#create-matrix-using-just-real-reactions">Create matrix using just ‘real’ reactions</a></li>
+  <li><a href="#expand-matrix-to-include-all-reactions-in-model" id="toc-expand-matrix-to-include-all-reactions-in-model" class="nav-link" data-scroll-target="#expand-matrix-to-include-all-reactions-in-model">Expand matrix to include all reactions in model</a></li>
+  <li><a href="#combine-random-weights-with-phase-weighting" id="toc-combine-random-weights-with-phase-weighting" class="nav-link" data-scroll-target="#combine-random-weights-with-phase-weighting">Combine random weights with phase-weighting</a></li>
+  <li><a href="#confirm-uniform-distributions" id="toc-confirm-uniform-distributions" class="nav-link" data-scroll-target="#confirm-uniform-distributions">Confirm uniform distributions:</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/noahsprent/mmon-gcm/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Alternative Flux Modes</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cobra</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mmon_gcm.alternativemodes <span class="im">import</span> get_real_reaction_ids</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mmon_gcm.solving <span class="im">import</span> get_weightings</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Looking for alternative solutions using the method for accounting for enzyme costs outlined in Cheung et al.&nbsp;(2015). From the methods section:</p>
+<blockquote class="blockquote">
+<p>The commonly applied objective function of minimizing the norm (minimization of total flux with equal weighting factor) can be defined as minimize S|ci 3 vi|, where the weighting factor, ci, is identical for all reactions. To allow for the unknown costs of each flux, ci was assigned a random value between 0 and 1 from a uniform distribution for each reaction, and a flux solution was obtained by minimizing S|ci 3 vi|. Multiple flux solutions, typically 1,000 but up to 105 when a more detailed analysis was required, were computed by repeatedly solving the optimization problem, each time with a different set of randomly chosen weighting factors. An averaged flux solution was calculated by averaging the multiple flux solutions generated with different sets of ci. Note that the number of flux solutions required depends on the nature of the problem, and this can be determined by testing the robustness of the analysis.</p>
+</blockquote>
+<p>The steps required for implementing the method are therefore: 1. Generate an matrix of n x m random weightings from a uniform distribution between 0 and 1, where n is the number of solutions required and m is the number of reactions in each phase of the model. 2. For each row of the matrix, combine these weightings with the phase-scaled weightings necessary as the phases are different lengths. 3. For each row of weightings, solve the model using pFBA 4. Take the average of all of the rows to give the averaged flux solution</p>
+<p>This notebook includes steps 1 and 2, producing a .csv file with the matrix. <a href="5.2_run_alternative_flux_modes.ipynb">Notebook 5.2</a> runs step 3 and 4, producing one .csv with all solutions and another with the averaged solution. The averaged solutions for this paper are then analysed in <a href="5.2_analyse_alternative_flux_modes.ipynb">Notebook 5.3</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>model_path <span class="op">=</span> <span class="st">"../models/4_stage_GC.json"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> cobra.io.load_json_model(model_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="create-matrix-using-just-real-reactions" class="level2">
+<h2 class="anchored" data-anchor-id="create-matrix-using-just-real-reactions">Create matrix using just ‘real’ reactions</h2>
+<p>Rather than having different random weightings for the same reaction in each phase, we want the same random weighting. We also don’t want to count flux for reactions that aren’t ‘real’ like pseudoreactions, aggregator reactions, and boundary reactions. So first we generate a matrix of random numbers for just those reactions, not including the phasing:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>real_reaction_ids <span class="op">=</span> get_real_reaction_ids(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="bu">len</span>(real_reaction_ids)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">1000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">314</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>random_matrix <span class="op">=</span> np.random.random_sample((n, m))</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>random_matrix_df <span class="op">=</span> pd.DataFrame(random_matrix)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>random_matrix_df.columns <span class="op">=</span> real_reaction_ids</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>random_matrix_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>PRO_PROTON_vc_me</th>
+      <th>PRO_PROTON_vc_gc</th>
+      <th>H2O_xc_me</th>
+      <th>H2O_xc_gc</th>
+      <th>sCIT_biomass_me</th>
+      <th>sCIT_biomass_gc</th>
+      <th>ACETYLGLUTKIN_RXN_p_me</th>
+      <th>ACETYLGLUTKIN_RXN_p_gc</th>
+      <th>2KG_OAA_mc_me</th>
+      <th>2KG_OAA_mc_gc</th>
+      <th>...</th>
+      <th>aMAL_v_gc_Linker</th>
+      <th>STARCH_p_gc_Linker</th>
+      <th>STARCH_p_me_Linker</th>
+      <th>SUCROSE_total_pseudolinker</th>
+      <th>GLC_total_pseudolinker</th>
+      <th>MAL_total_pseudolinker</th>
+      <th>FRU_total_pseudolinker</th>
+      <th>K_total_pseudolinker</th>
+      <th>Cl_total_pseudolinker</th>
+      <th>CIT_total_pseudolinker</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.916874</td>
+      <td>0.588542</td>
+      <td>0.265048</td>
+      <td>0.783205</td>
+      <td>0.918001</td>
+      <td>0.827355</td>
+      <td>0.727951</td>
+      <td>0.260480</td>
+      <td>0.911763</td>
+      <td>0.260757</td>
+      <td>...</td>
+      <td>0.256249</td>
+      <td>0.849630</td>
+      <td>0.036859</td>
+      <td>0.352452</td>
+      <td>0.165891</td>
+      <td>0.527951</td>
+      <td>0.514265</td>
+      <td>0.573895</td>
+      <td>0.943229</td>
+      <td>0.787065</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.837431</td>
+      <td>0.869500</td>
+      <td>0.251766</td>
+      <td>0.851621</td>
+      <td>0.807844</td>
+      <td>0.207134</td>
+      <td>0.166586</td>
+      <td>0.491988</td>
+      <td>0.613055</td>
+      <td>0.610856</td>
+      <td>...</td>
+      <td>0.190224</td>
+      <td>0.484610</td>
+      <td>0.660262</td>
+      <td>0.944763</td>
+      <td>0.689011</td>
+      <td>0.029902</td>
+      <td>0.458717</td>
+      <td>0.648120</td>
+      <td>0.896864</td>
+      <td>0.160396</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.671711</td>
+      <td>0.174232</td>
+      <td>0.278023</td>
+      <td>0.959027</td>
+      <td>0.929187</td>
+      <td>0.894054</td>
+      <td>0.655200</td>
+      <td>0.942286</td>
+      <td>0.975562</td>
+      <td>0.765088</td>
+      <td>...</td>
+      <td>0.160538</td>
+      <td>0.400109</td>
+      <td>0.135024</td>
+      <td>0.272108</td>
+      <td>0.661908</td>
+      <td>0.203095</td>
+      <td>0.493434</td>
+      <td>0.395530</td>
+      <td>0.027857</td>
+      <td>0.724801</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.912066</td>
+      <td>0.867228</td>
+      <td>0.696670</td>
+      <td>0.350903</td>
+      <td>0.308767</td>
+      <td>0.833534</td>
+      <td>0.860486</td>
+      <td>0.601825</td>
+      <td>0.634225</td>
+      <td>0.363727</td>
+      <td>...</td>
+      <td>0.714588</td>
+      <td>0.549787</td>
+      <td>0.644255</td>
+      <td>0.187938</td>
+      <td>0.006522</td>
+      <td>0.175178</td>
+      <td>0.367586</td>
+      <td>0.702406</td>
+      <td>0.469907</td>
+      <td>0.028718</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.407295</td>
+      <td>0.005681</td>
+      <td>0.669659</td>
+      <td>0.742074</td>
+      <td>0.134489</td>
+      <td>0.336690</td>
+      <td>0.847053</td>
+      <td>0.454356</td>
+      <td>0.253618</td>
+      <td>0.395133</td>
+      <td>...</td>
+      <td>0.279085</td>
+      <td>0.015945</td>
+      <td>0.397974</td>
+      <td>0.670957</td>
+      <td>0.761961</td>
+      <td>0.857324</td>
+      <td>0.689408</td>
+      <td>0.500088</td>
+      <td>0.837236</td>
+      <td>0.786871</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>0.549238</td>
+      <td>0.983931</td>
+      <td>0.616316</td>
+      <td>0.979573</td>
+      <td>0.991521</td>
+      <td>0.623560</td>
+      <td>0.240054</td>
+      <td>0.150167</td>
+      <td>0.076900</td>
+      <td>0.904664</td>
+      <td>...</td>
+      <td>0.624767</td>
+      <td>0.508215</td>
+      <td>0.721488</td>
+      <td>0.125900</td>
+      <td>0.341007</td>
+      <td>0.194615</td>
+      <td>0.169541</td>
+      <td>0.113740</td>
+      <td>0.643763</td>
+      <td>0.949376</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>0.298990</td>
+      <td>0.557697</td>
+      <td>0.919112</td>
+      <td>0.632737</td>
+      <td>0.205327</td>
+      <td>0.793606</td>
+      <td>0.883850</td>
+      <td>0.878186</td>
+      <td>0.757498</td>
+      <td>0.657648</td>
+      <td>...</td>
+      <td>0.730948</td>
+      <td>0.511767</td>
+      <td>0.178073</td>
+      <td>0.767833</td>
+      <td>0.274780</td>
+      <td>0.684812</td>
+      <td>0.523172</td>
+      <td>0.947464</td>
+      <td>0.204050</td>
+      <td>0.006956</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>0.310442</td>
+      <td>0.141863</td>
+      <td>0.507655</td>
+      <td>0.597543</td>
+      <td>0.309384</td>
+      <td>0.705092</td>
+      <td>0.469655</td>
+      <td>0.942340</td>
+      <td>0.362111</td>
+      <td>0.298743</td>
+      <td>...</td>
+      <td>0.494237</td>
+      <td>0.832757</td>
+      <td>0.152577</td>
+      <td>0.365978</td>
+      <td>0.656360</td>
+      <td>0.722871</td>
+      <td>0.537215</td>
+      <td>0.830815</td>
+      <td>0.864335</td>
+      <td>0.227395</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>0.087585</td>
+      <td>0.461775</td>
+      <td>0.996273</td>
+      <td>0.740516</td>
+      <td>0.224738</td>
+      <td>0.552139</td>
+      <td>0.189635</td>
+      <td>0.652741</td>
+      <td>0.267166</td>
+      <td>0.568535</td>
+      <td>...</td>
+      <td>0.035277</td>
+      <td>0.494617</td>
+      <td>0.816259</td>
+      <td>0.991288</td>
+      <td>0.463856</td>
+      <td>0.375362</td>
+      <td>0.745862</td>
+      <td>0.900269</td>
+      <td>0.183644</td>
+      <td>0.821859</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>0.926170</td>
+      <td>0.037719</td>
+      <td>0.348960</td>
+      <td>0.563737</td>
+      <td>0.921457</td>
+      <td>0.525878</td>
+      <td>0.459770</td>
+      <td>0.745981</td>
+      <td>0.834370</td>
+      <td>0.844547</td>
+      <td>...</td>
+      <td>0.382454</td>
+      <td>0.830025</td>
+      <td>0.655860</td>
+      <td>0.256822</td>
+      <td>0.577537</td>
+      <td>0.177064</td>
+      <td>0.610304</td>
+      <td>0.197392</td>
+      <td>0.857057</td>
+      <td>0.263141</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 1731 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="expand-matrix-to-include-all-reactions-in-model" class="level2">
+<h2 class="anchored" data-anchor-id="expand-matrix-to-include-all-reactions-in-model">Expand matrix to include all reactions in model</h2>
+<p>Now we use this dataframe with random weightings and transfer it to all of the reactions in the model. The random weighting is the same across phases for each reaction and set to zero for reactions that are not ‘real’.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>all_reactions_random_weightings_dict <span class="op">=</span> {}</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> reaction <span class="kw">in</span> model.reactions:</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> reaction.<span class="bu">id</span>[:<span class="op">-</span><span class="dv">2</span>] <span class="kw">in</span> random_matrix_df.columns:</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        all_reactions_random_weightings_dict[reaction.<span class="bu">id</span>] <span class="op">=</span> random_matrix_df.loc[:, reaction.<span class="bu">id</span>[:<span class="op">-</span><span class="dv">2</span>]]</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        all_reactions_random_weightings_dict[reaction.<span class="bu">id</span>] <span class="op">=</span> np.zeros(<span class="bu">len</span>(random_matrix_df.index))</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>random_weights_df <span class="op">=</span> pd.DataFrame.from_dict(all_reactions_random_weightings_dict)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>random_weights_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>EX_X_pi_t_me_1</th>
+      <th>EX_X_pi_t_me_2</th>
+      <th>EX_X_pi_t_me_3</th>
+      <th>EX_X_pi_t_me_4</th>
+      <th>EX_X_pi_t_gc_1</th>
+      <th>EX_X_pi_t_gc_2</th>
+      <th>EX_X_pi_t_gc_3</th>
+      <th>EX_X_pi_t_gc_4</th>
+      <th>EX_X_CO2_t_me_1</th>
+      <th>EX_X_CO2_t_me_2</th>
+      <th>...</th>
+      <th>K_total_pseudolinker_3</th>
+      <th>K_total_pseudolinker_4</th>
+      <th>Cl_total_pseudolinker_1</th>
+      <th>Cl_total_pseudolinker_2</th>
+      <th>Cl_total_pseudolinker_3</th>
+      <th>Cl_total_pseudolinker_4</th>
+      <th>CIT_total_pseudolinker_1</th>
+      <th>CIT_total_pseudolinker_2</th>
+      <th>CIT_total_pseudolinker_3</th>
+      <th>CIT_total_pseudolinker_4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.573895</td>
+      <td>0.573895</td>
+      <td>0.943229</td>
+      <td>0.943229</td>
+      <td>0.943229</td>
+      <td>0.943229</td>
+      <td>0.787065</td>
+      <td>0.787065</td>
+      <td>0.787065</td>
+      <td>0.787065</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.648120</td>
+      <td>0.648120</td>
+      <td>0.896864</td>
+      <td>0.896864</td>
+      <td>0.896864</td>
+      <td>0.896864</td>
+      <td>0.160396</td>
+      <td>0.160396</td>
+      <td>0.160396</td>
+      <td>0.160396</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.395530</td>
+      <td>0.395530</td>
+      <td>0.027857</td>
+      <td>0.027857</td>
+      <td>0.027857</td>
+      <td>0.027857</td>
+      <td>0.724801</td>
+      <td>0.724801</td>
+      <td>0.724801</td>
+      <td>0.724801</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.702406</td>
+      <td>0.702406</td>
+      <td>0.469907</td>
+      <td>0.469907</td>
+      <td>0.469907</td>
+      <td>0.469907</td>
+      <td>0.028718</td>
+      <td>0.028718</td>
+      <td>0.028718</td>
+      <td>0.028718</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.500088</td>
+      <td>0.500088</td>
+      <td>0.837236</td>
+      <td>0.837236</td>
+      <td>0.837236</td>
+      <td>0.837236</td>
+      <td>0.786871</td>
+      <td>0.786871</td>
+      <td>0.786871</td>
+      <td>0.786871</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.113740</td>
+      <td>0.113740</td>
+      <td>0.643763</td>
+      <td>0.643763</td>
+      <td>0.643763</td>
+      <td>0.643763</td>
+      <td>0.949376</td>
+      <td>0.949376</td>
+      <td>0.949376</td>
+      <td>0.949376</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.947464</td>
+      <td>0.947464</td>
+      <td>0.204050</td>
+      <td>0.204050</td>
+      <td>0.204050</td>
+      <td>0.204050</td>
+      <td>0.006956</td>
+      <td>0.006956</td>
+      <td>0.006956</td>
+      <td>0.006956</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.830815</td>
+      <td>0.830815</td>
+      <td>0.864335</td>
+      <td>0.864335</td>
+      <td>0.864335</td>
+      <td>0.864335</td>
+      <td>0.227395</td>
+      <td>0.227395</td>
+      <td>0.227395</td>
+      <td>0.227395</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.900269</td>
+      <td>0.900269</td>
+      <td>0.183644</td>
+      <td>0.183644</td>
+      <td>0.183644</td>
+      <td>0.183644</td>
+      <td>0.821859</td>
+      <td>0.821859</td>
+      <td>0.821859</td>
+      <td>0.821859</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.197392</td>
+      <td>0.197392</td>
+      <td>0.857057</td>
+      <td>0.857057</td>
+      <td>0.857057</td>
+      <td>0.857057</td>
+      <td>0.263141</td>
+      <td>0.263141</td>
+      <td>0.263141</td>
+      <td>0.263141</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 7093 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="combine-random-weights-with-phase-weighting" class="level2">
+<h2 class="anchored" data-anchor-id="combine-random-weights-with-phase-weighting">Combine random weights with phase-weighting</h2>
+<p>As we’ve done previously, we want to adjust the weights of reactions to take into account the different lengths of phases.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>full_weights_df <span class="op">=</span> pd.Series(get_weightings(model)) <span class="op">*</span> random_weights_df</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>full_weights_df <span class="op">=</span> full_weights_df.<span class="bu">round</span>(<span class="dv">8</span>)  <span class="co"># round to bring down below git max file size</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>full_weights_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>10_FORMYL_THF_pc_gc_1</th>
+      <th>10_FORMYL_THF_pc_gc_2</th>
+      <th>10_FORMYL_THF_pc_gc_3</th>
+      <th>10_FORMYL_THF_pc_gc_4</th>
+      <th>10_FORMYL_THF_pc_me_1</th>
+      <th>10_FORMYL_THF_pc_me_2</th>
+      <th>10_FORMYL_THF_pc_me_3</th>
+      <th>10_FORMYL_THF_pc_me_4</th>
+      <th>1TRANSKETO_RXN_p_gc_1</th>
+      <th>1TRANSKETO_RXN_p_gc_2</th>
+      <th>...</th>
+      <th>sSUC_biomass_me_3</th>
+      <th>sSUC_biomass_me_4</th>
+      <th>unlProtHYPO_c_gc_1</th>
+      <th>unlProtHYPO_c_gc_2</th>
+      <th>unlProtHYPO_c_gc_3</th>
+      <th>unlProtHYPO_c_gc_4</th>
+      <th>unlProtHYPO_c_me_1</th>
+      <th>unlProtHYPO_c_me_2</th>
+      <th>unlProtHYPO_c_me_3</th>
+      <th>unlProtHYPO_c_me_4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.196322</td>
+      <td>0.266360</td>
+      <td>6.126284</td>
+      <td>3.196322</td>
+      <td>2.003810</td>
+      <td>0.166984</td>
+      <td>3.840636</td>
+      <td>2.003810</td>
+      <td>4.628290</td>
+      <td>0.385691</td>
+      <td>...</td>
+      <td>3.685919</td>
+      <td>1.923088</td>
+      <td>3.013075</td>
+      <td>0.251090</td>
+      <td>5.775060</td>
+      <td>3.013075</td>
+      <td>4.919640</td>
+      <td>0.409970</td>
+      <td>9.429310</td>
+      <td>4.919640</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2.976393</td>
+      <td>0.248033</td>
+      <td>5.704753</td>
+      <td>2.976393</td>
+      <td>0.059372</td>
+      <td>0.004948</td>
+      <td>0.113797</td>
+      <td>0.059372</td>
+      <td>3.306903</td>
+      <td>0.275575</td>
+      <td>...</td>
+      <td>11.088275</td>
+      <td>5.785187</td>
+      <td>4.092069</td>
+      <td>0.341006</td>
+      <td>7.843133</td>
+      <td>4.092069</td>
+      <td>0.268098</td>
+      <td>0.022342</td>
+      <td>0.513855</td>
+      <td>0.268098</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.812475</td>
+      <td>0.317706</td>
+      <td>7.307244</td>
+      <td>3.812475</td>
+      <td>3.160252</td>
+      <td>0.263354</td>
+      <td>6.057151</td>
+      <td>3.160252</td>
+      <td>1.036738</td>
+      <td>0.086395</td>
+      <td>...</td>
+      <td>5.557520</td>
+      <td>2.899576</td>
+      <td>3.424889</td>
+      <td>0.285407</td>
+      <td>6.564371</td>
+      <td>3.424889</td>
+      <td>1.629429</td>
+      <td>0.135786</td>
+      <td>3.123073</td>
+      <td>1.629429</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.186226</td>
+      <td>0.015519</td>
+      <td>0.356934</td>
+      <td>0.186226</td>
+      <td>1.913905</td>
+      <td>0.159492</td>
+      <td>3.668317</td>
+      <td>1.913905</td>
+      <td>4.470282</td>
+      <td>0.372524</td>
+      <td>...</td>
+      <td>2.648911</td>
+      <td>1.382040</td>
+      <td>4.475259</td>
+      <td>0.372938</td>
+      <td>8.577580</td>
+      <td>4.475259</td>
+      <td>0.418057</td>
+      <td>0.034838</td>
+      <td>0.801276</td>
+      <td>0.418057</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1.899401</td>
+      <td>0.158283</td>
+      <td>3.640519</td>
+      <td>1.899401</td>
+      <td>1.419532</td>
+      <td>0.118294</td>
+      <td>2.720771</td>
+      <td>1.419532</td>
+      <td>3.441213</td>
+      <td>0.286768</td>
+      <td>...</td>
+      <td>4.127187</td>
+      <td>2.153315</td>
+      <td>3.283695</td>
+      <td>0.273641</td>
+      <td>6.293748</td>
+      <td>3.283695</td>
+      <td>4.740312</td>
+      <td>0.395026</td>
+      <td>9.085597</td>
+      <td>4.740312</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>995</th>
+      <td>2.852690</td>
+      <td>0.237724</td>
+      <td>5.467655</td>
+      <td>2.852690</td>
+      <td>0.020950</td>
+      <td>0.001746</td>
+      <td>0.040154</td>
+      <td>0.020950</td>
+      <td>3.208964</td>
+      <td>0.267414</td>
+      <td>...</td>
+      <td>5.407379</td>
+      <td>2.821241</td>
+      <td>5.569828</td>
+      <td>0.464152</td>
+      <td>10.675504</td>
+      <td>5.569828</td>
+      <td>1.066897</td>
+      <td>0.088908</td>
+      <td>2.044886</td>
+      <td>1.066897</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>2.628661</td>
+      <td>0.219055</td>
+      <td>5.038267</td>
+      <td>2.628661</td>
+      <td>3.061566</td>
+      <td>0.255130</td>
+      <td>5.868001</td>
+      <td>3.061566</td>
+      <td>0.898539</td>
+      <td>0.074878</td>
+      <td>...</td>
+      <td>8.525851</td>
+      <td>4.448270</td>
+      <td>5.790531</td>
+      <td>0.482544</td>
+      <td>11.098518</td>
+      <td>5.790531</td>
+      <td>3.936361</td>
+      <td>0.328030</td>
+      <td>7.544692</td>
+      <td>3.936361</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>1.765245</td>
+      <td>0.147104</td>
+      <td>3.383386</td>
+      <td>1.765245</td>
+      <td>1.824386</td>
+      <td>0.152032</td>
+      <td>3.496741</td>
+      <td>1.824386</td>
+      <td>1.165449</td>
+      <td>0.097121</td>
+      <td>...</td>
+      <td>10.186639</td>
+      <td>5.314768</td>
+      <td>0.586656</td>
+      <td>0.048888</td>
+      <td>1.124424</td>
+      <td>0.586656</td>
+      <td>4.460932</td>
+      <td>0.371744</td>
+      <td>8.550119</td>
+      <td>4.460932</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>2.427627</td>
+      <td>0.202302</td>
+      <td>4.652951</td>
+      <td>2.427627</td>
+      <td>1.101725</td>
+      <td>0.091810</td>
+      <td>2.111640</td>
+      <td>1.101725</td>
+      <td>1.543910</td>
+      <td>0.128659</td>
+      <td>...</td>
+      <td>9.506838</td>
+      <td>4.960089</td>
+      <td>3.335862</td>
+      <td>0.277988</td>
+      <td>6.393735</td>
+      <td>3.335862</td>
+      <td>0.364925</td>
+      <td>0.030410</td>
+      <td>0.699439</td>
+      <td>0.364925</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>5.600001</td>
+      <td>0.466667</td>
+      <td>10.733334</td>
+      <td>5.600001</td>
+      <td>3.066118</td>
+      <td>0.255510</td>
+      <td>5.876726</td>
+      <td>3.066118</td>
+      <td>0.754813</td>
+      <td>0.062901</td>
+      <td>...</td>
+      <td>10.094004</td>
+      <td>5.266437</td>
+      <td>4.535840</td>
+      <td>0.377987</td>
+      <td>8.693693</td>
+      <td>4.535840</td>
+      <td>1.374694</td>
+      <td>0.114558</td>
+      <td>2.634830</td>
+      <td>1.374694</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 7093 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="confirm-uniform-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="confirm-uniform-distributions">Confirm uniform distributions:</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>random_ids <span class="op">=</span> random.sample(real_reaction_ids, <span class="dv">10</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="bu">len</span>(random_ids), <span class="dv">4</span>, figsize<span class="op">=</span>(<span class="dv">4</span> <span class="op">*</span> <span class="dv">4</span>, <span class="dv">3</span> <span class="op">*</span> <span class="bu">len</span>(random_ids)), sharex<span class="op">=</span><span class="st">"col"</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(random_ids)):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        axs[y][x].hist(full_weights_df.loc[:, <span class="ss">f"</span><span class="sc">{</span>random_ids[y]<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>x <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">"</span>], bins<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        axs[y][x].set_xlabel(<span class="ss">f"Reaction weight in phase </span><span class="sc">{</span>x <span class="op">+</span> <span class="dv">1</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        axs[y][<span class="dv">0</span>].set_ylabel(random_ids[y])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="4.1_generate_alternative_flux_modes_matrix_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>full_weights_df.to_csv(<span class="st">"../outputs/alternative_weighting/alternative_weights.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./3.3_analyse_constraint_scan.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Analysing the results of the constraint scan</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./4.2_run_alternative_flux_modes.html" class="pagination-link">
+        <span class="nav-page-text">Run alternative flux modes simulations</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

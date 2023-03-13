@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="This module contains the code for building and editing the guard cell model">
+
+<title>mmon-gcm - buildingediting</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../functions/constraintscan.html" rel="next">
+<link href="../functions/analysing.html" rel="prev">
+<link href="../favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="mmon-gcm - buildingediting">
+<meta property="og:description" content="This module contains the code for building and editing the guard cell model">
+<meta property="og:site-name" content="mmon-gcm">
+<meta name="twitter:title" content="mmon-gcm - buildingediting">
+<meta name="twitter:description" content="This module contains the code for building and editing the guard cell model">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">mmon-gcm</span>
+    </a>
+  </div>
+          <div id="quarto-search" class="" title="Search"></div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">buildingediting</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../logo.svg" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">MMON-GCM</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Building model and defining parameters</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1.0_generating_linkers.html" class="sidebar-item-text sidebar-link">Generating table for linkers/osmolytes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1.1_buildingmodel.html" class="sidebar-item-text sidebar-link">Building model</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1.2_defining_parameters.html" class="sidebar-item-text sidebar-link">Finding parameters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1.3_atpase_constraint.html" class="sidebar-item-text sidebar-link">Is H+ATPase limiting?</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  1.4_flutschconcentrations.ipynb
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1.5_convert_horrer_starch_level.html" class="sidebar-item-text sidebar-link">Starch amount estimation</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Solving and analysing specific scenarios for paper</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2.1_solvingmodel.html" class="sidebar-item-text sidebar-link">Solving guard cell models for different parameters</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2.2_analysingsolutions.html" class="sidebar-item-text sidebar-link">Analysing solutions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2.3_flux_map_values.html" class="sidebar-item-text sidebar-link">Calculating line widths for flux maps</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Running constraints scan</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../3.1_generate_constraints_df.html" class="sidebar-item-text sidebar-link">Constraint scan</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../3.2_run_constraint_scan.html" class="sidebar-item-text sidebar-link">Running Constraint Scan</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../3.3_analyse_constraint_scan.html" class="sidebar-item-text sidebar-link">Analysing the results of the constraint scan</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">Running and analysing alternative flux modes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../4.1_generate_alternative_flux_modes_matrix.html" class="sidebar-item-text sidebar-link">Alternative Flux Modes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../4.2_run_alternative_flux_modes.html" class="sidebar-item-text sidebar-link">Run alternative flux modes simulations</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../4.3_analyse_alternative_flux_modes.html" class="sidebar-item-text sidebar-link">Analysing alternative flux modes</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  prep_plant_cell.ipynb
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">functions</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/alternativemodes.html" class="sidebar-item-text sidebar-link">alternativemodes</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/analysing.html" class="sidebar-item-text sidebar-link">Analysing</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/buildingediting.html" class="sidebar-item-text sidebar-link active">buildingediting</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/constraintscan.html" class="sidebar-item-text sidebar-link">constraintscan</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/helper.html" class="sidebar-item-text sidebar-link">Helper functions</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/osmolyteconstraints.html" class="sidebar-item-text sidebar-link">osmolyteconstraints</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions/solving.html" class="sidebar-item-text sidebar-link">solving</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#add_metabolite" id="toc-add_metabolite" class="nav-link active" data-scroll-target="#add_metabolite">add_metabolite</a></li>
+  <li><a href="#add_reaction" id="toc-add_reaction" class="nav-link" data-scroll-target="#add_reaction">add_reaction</a></li>
+  <li><a href="#split_model" id="toc-split_model" class="nav-link" data-scroll-target="#split_model">split_model</a></li>
+  <li><a href="#check_number_of_models" id="toc-check_number_of_models" class="nav-link" data-scroll-target="#check_number_of_models">check_number_of_models</a></li>
+  <li><a href="#set_bounds_multi" id="toc-set_bounds_multi" class="nav-link" data-scroll-target="#set_bounds_multi">set_bounds_multi</a></li>
+  <li><a href="#add_linkers" id="toc-add_linkers" class="nav-link" data-scroll-target="#add_linkers">add_linkers</a></li>
+  <li><a href="#def_linkers" id="toc-def_linkers" class="nav-link" data-scroll-target="#def_linkers">def_linkers</a></li>
+  <li><a href="#add_metabolites_to_reaction_multi" id="toc-add_metabolites_to_reaction_multi" class="nav-link" data-scroll-target="#add_metabolites_to_reaction_multi">add_metabolites_to_reaction_multi</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/noahsprent/mmon-gcm/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">buildingediting</h1>
+</div>
+
+<div>
+  <div class="description">
+    This module contains the code for building and editing the guard cell model
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<!-- WARNING: THIS FILE WAS AUTOGENERATED! DO NOT EDIT! -->
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L11" target="_blank" style="float:right; font-size:smaller">source</a></p>
+<section id="add_metabolite" class="level3">
+<h3 class="anchored" data-anchor-id="add_metabolite">add_metabolite</h3>
+<blockquote class="blockquote">
+<pre><code> add_metabolite (model, name, compartment='default', multi=True)</code></pre>
+</blockquote>
+<p>This function adds a metabolite to the given model, and returns this metabolite. If multi is set to true it will be added to every phase of the model.</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L34" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="add_reaction" class="level3">
+<h3 class="anchored" data-anchor-id="add_reaction">add_reaction</h3>
+<blockquote class="blockquote">
+<pre><code> add_reaction (model, name, multi=True)</code></pre>
+</blockquote>
+<p>This function adds a reaction to the given model, and returns this reaction. If multi is set to true it will be added to every phase of the model.</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L54" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="split_model" class="level3">
+<h3 class="anchored" data-anchor-id="split_model">split_model</h3>
+<blockquote class="blockquote">
+<pre><code> split_model (model, labels)</code></pre>
+</blockquote>
+<p>This function takes two arguments: the model to be split and the labels for the models to split it into. len(labels) number of models will be created, with the suffix “_label” to define them.</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L115" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="check_number_of_models" class="level3">
+<h3 class="anchored" data-anchor-id="check_number_of_models">check_number_of_models</h3>
+<blockquote class="blockquote">
+<pre><code> check_number_of_models (model)</code></pre>
+</blockquote>
+<p>This function returns the number of phases of the model based on the maximal number of the last tag</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L132" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="set_bounds_multi" class="level3">
+<h3 class="anchored" data-anchor-id="set_bounds_multi">set_bounds_multi</h3>
+<blockquote class="blockquote">
+<pre><code> set_bounds_multi (model, reaction_id, lower_flux, upper_flux)</code></pre>
+</blockquote>
+<p>Constrain a reaction’s flux in all phases</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L146" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="add_linkers" class="level3">
+<h3 class="anchored" data-anchor-id="add_linkers">add_linkers</h3>
+<blockquote class="blockquote">
+<pre><code> add_linkers (model, linkers_file, compartments, cells, phase_times)</code></pre>
+</blockquote>
+<p>This function adds linker reactions for osmolytes to a phased model of guard cell, and adds osmolarity and charge linker pseudoreactions. It takes five arguments: model: the model to which linkers are to be added linkersfile: a .csv file with a list of osmolytes and their osmotic coefficients, leave the osmotic coefficient at 0 to add as a linker but not contribute to osmolarity compartments: a list of the compartments to add linker reactions to within cells cells: a list of cell tags to be used phase_times: a list of the lengths of each phase, for scaling of the linker reactions</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L261" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="def_linkers" class="level3">
+<h3 class="anchored" data-anchor-id="def_linkers">def_linkers</h3>
+<blockquote class="blockquote">
+<pre><code> def_linkers (file)</code></pre>
+</blockquote>
+<p>This function creates a dict of osmolytes and their osmotic coefficients from the .csv file, and is used by addlinkers</p>
+<hr>
+<p><a href="https://github.com/noahsprent/mmon-gcm/blob/main/mmon_gcm/buildingediting.py#L279" target="_blank" style="float:right; font-size:smaller">source</a></p>
+</section>
+<section id="add_metabolites_to_reaction_multi" class="level3">
+<h3 class="anchored" data-anchor-id="add_metabolites_to_reaction_multi">add_metabolites_to_reaction_multi</h3>
+<blockquote class="blockquote">
+<pre><code> add_metabolites_to_reaction_multi (model, reaction, metabolites_dict)</code></pre>
+</blockquote>
+<p>This function adds a dictionary of metabolites to a reaction in every phase of the model</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../functions/analysing.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Analysing</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../functions/constraintscan.html" class="pagination-link">
+        <span class="nav-page-text">constraintscan</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
