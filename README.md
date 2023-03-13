@@ -5,5 +5,16 @@ MMON-GCM
 
 ## Installation
 
-The notebooks in this project are automatically processed to make the
-documentation.
+This code does not work with python 3.10 because of a dependency issue
+with Escher: https://github.com/zakandrewking/escher/issues/377 . So
+make sure you install the package in a venv with e.g. python 3.9.
+
+1.  Clone the repo from GitHub.
+2.  Make a venv with e.g. conda:
+    `conda create --name mmon-gcm python=3.9`
+3.  Install the package and dependencies in that virtualenv by running
+    `pip install -e .` in the root of the repo
+4.  Run the notebook scripts in the order that they are numbered.
+
+The project uses nbdev2 to autocreate packages and documentation from
+jupyter notebooks.
